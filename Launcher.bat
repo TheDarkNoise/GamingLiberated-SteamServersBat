@@ -3,7 +3,7 @@ set mainfolder=%CD%
 
 :menu
 echo #######################################################
-echo # TheDarkNoise Project - Steam Servers
+echo # GamingLiberated Project - Steam Servers
 echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
@@ -54,7 +54,7 @@ set battleye=True
 REM -------- CONAN EXILES SETTINGS HERE -------- 
 
 echo #######################################################
-echo # TheDarkNoise Project - %gamename% 
+echo # GamingLiberated Project - %gamename% 
 echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
@@ -119,8 +119,8 @@ steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 
 echo #######################################################
-echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # GamingLiberated Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo Start the game or the server before try to change the settings.
@@ -234,7 +234,7 @@ cls
 cd "%mainfolder%\steamapps\common\%gamefolder%"
 
 echo ###########################################################
-echo # TheDarkNoise Project - %gamename%
+echo # GamingLiberated Project - %gamename%
 echo # https://www.patreon.com/TheDarkNoise
 echo ###########################################################
 echo.
@@ -274,14 +274,14 @@ cd "%mainfolder%\steamapps\common\%gamefolder%"
 
 REM -------- RUST SETTINGS HERE -------- 
 
-set servername=Single Player Project
+set servername=GamingLiberated Project
 set description=Description shown on server connection window.
 set port=28015
 set level=Procedural Map
 set seed=1234
 set worldsize=4000
 set maxplayers=10
-set serverurl=https://www.patreon.com/conan513
+set serverurl=https://www.patreon.com/TheDarkNoise
 set server_identity=server1
 set rcon_password=letmein
 
@@ -289,7 +289,7 @@ REM -------- RUST SETTINGS HERE --------
 
 
 echo #######################################################
-echo # TheDarkNoise Project - %gamename%
+echo # GamingLiberated Project - %gamename%
 echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
@@ -346,7 +346,7 @@ echo.
 steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 echo #######################################################
-echo # TheDarkNoise Project - %gamename%
+echo # GamingLiberated Project - %gamename%
 echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
