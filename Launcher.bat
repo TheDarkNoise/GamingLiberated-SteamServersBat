@@ -3,8 +3,8 @@ set mainfolder=%CD%
 
 :menu
 echo #######################################################
-echo # Single Player Project - Steam Servers
-echo # https://www.patreon.com/conan513
+echo # TheDarkNoise Project - Steam Servers
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo 1 - Conan Exiles
@@ -54,8 +54,8 @@ set battleye=True
 REM -------- CONAN EXILES SETTINGS HERE -------- 
 
 echo #######################################################
-echo # Single Player Project - %gamename% 
-echo # https://www.patreon.com/conan513
+echo # TheDarkNoise Project - %gamename% 
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo ----------- SERVER SETTINGS -----------
@@ -186,8 +186,8 @@ steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 
 echo #######################################################
-echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # TheDarkNoise Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo 1 - Start the server
@@ -234,8 +234,8 @@ cls
 cd "%mainfolder%\steamapps\common\%gamefolder%"
 
 echo ###########################################################
-echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # TheDarkNoise Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
 echo ###########################################################
 echo.
 echo 1 - Start Classic Casual
@@ -289,8 +289,8 @@ REM -------- RUST SETTINGS HERE --------
 
 
 echo #######################################################
-echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # TheDarkNoise Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo ----------- SERVER SETTINGS -----------
@@ -346,8 +346,8 @@ echo.
 steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 echo #######################################################
-echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # TheDarkNoise Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo 1 - Start the server
