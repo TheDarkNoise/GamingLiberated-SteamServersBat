@@ -21,8 +21,10 @@ if "%gameselect%"=="3" (goto menu_7daystodie)
 if "%gameselect%"=="4" (goto menu_csgo)
 if "%gameselect%"=="5" (goto menu_rust)
 if "%gameselect%"=="6" (goto menu_tf2)
+if "%gameselect%"=="7" (goto menu)
+if "%gameselect%"=="8" (goto menu)
+if "%gameselect%"=="9" (goto menu)
 if "%gameselect%"=="" (goto menu)
-
 
 REM ------------------------------------------------------------------------------------------------------------------------------
 
@@ -366,3 +368,112 @@ echo.
 cd "%mainfolder%\steamapps\common\%gamefolder%"
 start "" srcds.exe -console -game tf +sv_pure 1 +map ctf_2fort +maxplayers 24
 exit
+
+REM ------------------------------------------------------------------------------------------------------------------------------
+
+:menu_DayZ
+set appid=221100
+set gamename=StandAlone DayZ
+set gamefolder=DayZ Dedicated Server
+
+cls
+echo.
+echo Checking %gamename% server updates...
+echo.
+steamcmd.exe +login anonymous +app_update %appid% +quit
+cls
+echo #######################################################
+echo # GamingLiberated Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
+echo #######################################################
+echo.
+echo 1 - Start the server
+echo 2 - Open Server Config page
+echo 3 - Open Server setup page
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto start_DayZ)
+if "%menu%"=="2" (start https://community.bistudio.com/wiki/DayZ:Server_Configuration)
+if "%menu%"=="" (goto menu)
+
+:start_ 
+cls
+echo Starting the %gamename% server...
+echo Please wait...
+echo.
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+start "" DayZServer_x64.exe -console -config=serverDZ.cfg -port=2302 --dologs -adminlog -netlog -freezecheck
+exit
+
+
+REM ------------------------------------------------------------------------------------------------------------------------------
+
+:menu_
+set appid=
+set gamename=
+set gamefolder=
+
+cls
+echo.
+echo Checking %gamename% server updates...
+echo.
+steamcmd.exe +login anonymous +app_update %appid% +quit
+cls
+echo #######################################################
+echo # GamingLiberated Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
+echo #######################################################
+echo.
+echo 1 - Start the server
+echo 2 - Open wiki page
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto start_)
+if "%menu%"=="2" (start https://wiki.teamfortress.com/wiki/Windows_dedicated_server)
+if "%menu%"=="" (goto menu)
+
+:start_ 
+cls
+echo Starting the %gamename% server...
+echo Please wait...
+echo.
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+start "" srcds.exe -console -game tf +sv_pure 1 +map ctf_2fort +maxplayers 24
+exit
+
+
+REM ------------------------------------------------------------------------------------------------------------------------------
+
+:menu_
+set appid=
+set gamename=
+set gamefolder=
+
+cls
+echo.
+echo Checking %gamename% server updates...
+echo.
+steamcmd.exe +login anonymous +app_update %appid% +quit
+cls
+echo #######################################################
+echo # GamingLiberated Project - %gamename%
+echo # https://www.patreon.com/TheDarkNoise
+echo #######################################################
+echo.
+echo 1 - Start the server
+echo 2 - Open wiki page
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto start_)
+if "%menu%"=="2" (start https://wiki.teamfortress.com/wiki/Windows_dedicated_server)
+if "%menu%"=="" (goto menu)
+
+:start_ 
+cls
+echo Starting the %gamename% server...
+echo Please wait...
+echo.
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+start "" srcds.exe -console -game tf +sv_pure 1 +map ctf_2fort +maxplayers 24
+exit
+
