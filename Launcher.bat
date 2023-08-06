@@ -40,7 +40,7 @@ cls
 
 REM -------- CONAN EXILES SETTINGS HERE -------- 
 
-set servername=Single Player Project
+set servername=GamingLiberated Project
 set password=
 set adminpassword=123456
 set maxplayers=10
