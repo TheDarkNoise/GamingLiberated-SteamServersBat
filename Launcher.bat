@@ -351,7 +351,7 @@ steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 echo #######################################################
 echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo 1 - Start the server
@@ -384,7 +384,7 @@ steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 echo #######################################################
 echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo 1 - Start the server
@@ -431,7 +431,7 @@ steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 echo #######################################################
 echo # Single Player Project - %gamename%
-echo # https://www.patreon.com/conan513
+echo # https://www.patreon.com/TheDarkNoise
 echo #######################################################
 echo.
 echo 1 - Start the server
