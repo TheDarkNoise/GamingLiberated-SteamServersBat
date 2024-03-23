@@ -13,6 +13,8 @@ echo 3 - 7 Days To Die
 echo 4 - Counter-Strike Global Offensive
 echo 5 - Rust
 echo 6 - Team Fortress 2
+echo 7 - Barotrauma
+echo 8 - SCP: Secret Laboratory
 echo.
 set /P gameselect=Enter a number: 
 if "%gameselect%"=="1" (goto menu_conanexiles)
@@ -21,9 +23,9 @@ if "%gameselect%"=="3" (goto menu_7daystodie)
 if "%gameselect%"=="4" (goto menu_csgo)
 if "%gameselect%"=="5" (goto menu_rust)
 if "%gameselect%"=="6" (goto menu_tf2)
-if "%gameselect%"=="7" (goto menu_DayZ)
-if "%gameselect%"=="8" (goto menu)
-if "%gameselect%"=="9" (goto menu)
+if "%gameselect%"=="7" (goto menu_barotrauma)
+if "%gameselect%"=="8" (goto menu_secretlab)
+if "%gameselect%"=="9" (goto menu_DayZ)
 if "%gameselect%"=="" (goto menu)
 
 REM ------------------------------------------------------------------------------------------------------------------------------
@@ -348,8 +350,8 @@ echo.
 steamcmd.exe +login anonymous +app_update %appid% +quit
 cls
 echo #######################################################
-echo # GamingLiberated Project - %gamename%
-echo # https://www.patreon.com/TheDarkNoise
+echo # Single Player Project - %gamename%
+echo # https://www.patreon.com/conan513
 echo #######################################################
 echo.
 echo 1 - Start the server
@@ -367,6 +369,95 @@ echo Please wait...
 echo.
 cd "%mainfolder%\steamapps\common\%gamefolder%"
 start "" srcds.exe -console -game tf +sv_pure 1 +map ctf_2fort +maxplayers 24
+exit
+
+:menu_barotrauma
+set appid=1026340
+set gamename=Barotrauma
+set gamefolder=Barotrauma Dedicated Server
+
+cls
+echo.
+echo Checking %gamename% server updates...
+echo.
+steamcmd.exe +login anonymous +app_update %appid% +quit
+cls
+echo #######################################################
+echo # Single Player Project - %gamename%
+echo # https://www.patreon.com/conan513
+echo #######################################################
+echo.
+echo 1 - Start the server
+echo 2 - Open config file
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto start_barotrauma)
+if "%menu%"=="2" (goto config_barotrauma)
+if "%menu%"=="" (goto menu)
+
+:config_barotrauma
+cls
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+if not exist "%mainfolder%\steamapps\common\%gamefolder%\serversettings.xml" goto no_firstrun_barotrauma
+start "" serversettings.xml
+goto menu_barotrauma
+
+:no_firstrun_barotrauma
+cls
+echo Some config files missing.
+echo Try to start the server once.
+pause
+goto menu_barotrauma
+
+:start_barotrauma
+cls
+echo Starting the %gamename% server...
+echo Please wait...
+echo.
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+start "" DedicatedServer.exe
+exit
+
+:menu_secretlab
+set appid=996560
+set gamename=SCP: Secret Laboratory
+set gamefolder=SCP Secret Laboratory Dedicated Server
+
+cls
+echo.
+echo Checking %gamename% server updates...
+echo.
+steamcmd.exe +login anonymous +app_update %appid% +quit
+cls
+echo #######################################################
+echo # Single Player Project - %gamename%
+echo # https://www.patreon.com/conan513
+echo #######################################################
+echo.
+echo 1 - Start the server
+echo 2 - Open config folder
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto start_secretlab)
+if "%menu%"=="2" (goto config_secretlab)
+if "%menu%"=="" (goto menu)
+
+:config_secretlab
+cls
+echo Starting the %gamename% server...
+echo Please wait...
+echo.
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+start "" appdata.bat
+goto menu_secretlab
+
+:start_secretlab
+cls
+echo Starting the %gamename% server...
+echo Please wait...
+echo.
+cd "%mainfolder%\steamapps\common\%gamefolder%"
+start "" LocalAdmin.exe
 exit
 
 REM ------------------------------------------------------------------------------------------------------------------------------
@@ -404,7 +495,6 @@ echo.
 cd "%mainfolder%\steamapps\common\%gamefolder%"
 start "" DayZServer_x64.exe -console -config=serverDZ.cfg -port=2302 --dologs -adminlog -netlog -freezecheck
 exit
-
 
 REM ------------------------------------------------------------------------------------------------------------------------------
 
